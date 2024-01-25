@@ -110,6 +110,11 @@ public class RoomController : MonoBehaviour
          }
 
             loadedRooms.Add(room);
+    } else
+    {
+
+        Destroy(room.gameObject);
+        isLoadingRoom = false;
     }
         }
 
