@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RoomLayouts/Empty.unity
     guid: 1e21158eb1084354dab58ca1672e486b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/RoomLayouts/End.unity
     guid: 7f87fed29486b1f4486b6c5e5e329322
+  - enabled: 1
+    path: Assets/Scenes/RoomLayouts/Shop.unity
+    guid: 1c3c002b3edef1242b4b691942aee5c8
   m_configObjects: {}
