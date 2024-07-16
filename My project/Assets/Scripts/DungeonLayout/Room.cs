@@ -13,6 +13,7 @@ public class Room : MonoBehaviour
      public Door rightDoor;
       public Door topDoor;
        public Door bottomDoor;
+        public bool hasEntered = false;
 
 
        public List<Door> doors = new List<Door>();
@@ -118,12 +119,13 @@ public class Room : MonoBehaviour
         return new Vector3 ( X * Width, Y * Height);
     }
 
-
-    void OnTriggerEnter2D(Collider2D other){
-         Debug.Log("Trigger exited");
-        if(other.tag == "Player"){
-
-            RoomController.instance.OnPlayerEnterRoom(this);
+void OnTriggerEnter2D(Collider2D other)
+    {
+     if (other.CompareTag("Player") && !hasEntered)
+    {
+        hasEntered = true;
+            Debug.Log("Player entered room: " + name);
+            RoomController.instance.OnPlayerEnterRoom(this); // Update the RoomController with the current room
         }
         
     }

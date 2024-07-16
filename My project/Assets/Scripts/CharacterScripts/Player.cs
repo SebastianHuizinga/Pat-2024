@@ -8,16 +8,17 @@ public class Player : MonoBehaviour
     Vector2 movement;
 
     [SerializeField] float dashSpeed = 10f;
-    [SerializeField] float dashLength = 1f;
+    [SerializeField] float dashLength = 0.2f;
     [SerializeField] float dashCD = 1f;
     bool isDashing;
-    bool canDash = true;
+    bool canDash = false; // Start with dashing disabled
     float dashCooldownTimer;
+
+    public AbilityUI abilityUI; // Reference to the AbilityUI script
 
     void Start()
     {
-        canDash = true;
-        dashCooldownTimer = 0f;
+        dashCooldownTimer = dashCD; // Initialize the cooldown timer
     }
 
     void Update()
@@ -27,13 +28,15 @@ public class Player : MonoBehaviour
             return;
         }
 
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
             StartCoroutine(Dash());
+            canDash = false; // Disable dashing until cooldown is complete
+            abilityUI.StartCooldown(dashCD); // Notify the AbilityUI to start the cooldown
         }
-
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
 
         if (!canDash)
         {
@@ -45,30 +48,41 @@ public class Player : MonoBehaviour
     {
         if (isDashing)
         {
-            return;
+            rb.MovePosition(rb.position + movement * dashSpeed * Time.fixedDeltaTime);
         }
-
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        else
+        {
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        }
     }
 
     private IEnumerator Dash()
     {
         isDashing = true;
-        canDash = false;
-        rb.velocity = new Vector2(movement.x * dashSpeed, movement.y * dashSpeed);
+
+        Vector2 dashDirection = movement.normalized;
+        rb.velocity = dashDirection * dashSpeed;
+
         yield return new WaitForSeconds(dashLength);
+
+        rb.velocity = Vector2.zero;
         isDashing = false;
 
-        // Start the cooldown timer
+        // Start the cooldown after the dash ends
         dashCooldownTimer = dashCD;
     }
 
     void ApplyCooldown()
     {
-        dashCooldownTimer -= Time.deltaTime;
-        if (dashCooldownTimer <= 0f)
+        if (!isDashing)
         {
-            canDash = true;
+            dashCooldownTimer -= Time.deltaTime;
+
+            if (dashCooldownTimer <= 0f)
+            {
+                canDash = true; // Enable dashing again once cooldown is complete
+                dashCooldownTimer = 0f; // Ensure timer does not go negative
+            }
         }
     }
 }
