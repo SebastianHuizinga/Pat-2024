@@ -131,9 +131,9 @@ public class RoomController : MonoBehaviour
     }
 
     public void OnPlayerEnterRoom(Room room){
-
-        CameraController.instance.currRoom = room;
         currRoom = room;
+        CameraController.instance.currRoom = room;
+        
     }
 }
 

@@ -146,8 +146,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156969865}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.19, y: 7.956, z: 0.046778228}
-  m_LocalScale: {x: 11.026289, y: 7.5097184, z: 1}
+  m_LocalPosition: {x: 1.19, y: 7.7419, z: 0.046778228}
+  m_LocalScale: {x: 9.688663, y: 7.5097184, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2021761711}
@@ -580,8 +580,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172083724}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.4677, y: 1.23, z: 0.046778228}
-  m_LocalScale: {x: 10.286987, y: 7.5097184, z: 1}
+  m_LocalPosition: {x: 13.8246, y: 1.23, z: 0.046778228}
+  m_LocalScale: {x: 12.516701, y: 7.5097184, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2021761711}
@@ -714,7 +714,7 @@ Transform:
   m_GameObject: {fileID: 1246530680}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -10.1369, y: 0.96, z: 0.046778228}
-  m_LocalScale: {x: 10.656638, y: 7.5097184, z: 1}
+  m_LocalScale: {x: 10.656413, y: 7.5097184, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2021761711}
@@ -843,6 +843,7 @@ MonoBehaviour:
   rightDoor: {fileID: 0}
   topDoor: {fileID: 0}
   bottomDoor: {fileID: 0}
+  hasEntered: 0
   doors: []
 --- !u!61 &1252332673
 BoxCollider2D:
@@ -1027,8 +1028,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731441704}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.29, y: -4.8997, z: 0.046778228}
-  m_LocalScale: {x: 9.424146, y: 7.5097184, z: 1}
+  m_LocalPosition: {x: 1.29, y: -5.1852, z: 0.046778228}
+  m_LocalScale: {x: 11.20803, y: 7.5097184, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2021761711}

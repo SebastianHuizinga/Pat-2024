@@ -124,8 +124,9 @@ void OnTriggerEnter2D(Collider2D other)
      if (other.CompareTag("Player") && !hasEntered)
     {
         hasEntered = true;
+        
             Debug.Log("Player entered room: " + name);
-            RoomController.instance.OnPlayerEnterRoom(this); // Update the RoomController with the current room
+          // Update the RoomController with the current room
         }
         
     }

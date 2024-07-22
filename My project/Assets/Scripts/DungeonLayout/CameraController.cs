@@ -43,7 +43,7 @@ public class CameraController : MonoBehaviour
         if(currRoom == null){
             return Vector3.zero;
         }
-
+        
         Vector3 targetPos = currRoom.GetRoomCentre();
         targetPos.z = transform.position.z;
 
