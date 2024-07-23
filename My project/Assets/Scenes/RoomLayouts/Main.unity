@@ -559,7 +559,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.1490869, y: 0.1279983}
   m_EdgeRadius: 0
 --- !u!1001 &1549363750
 PrefabInstance:
@@ -794,6 +794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ceeb7e63cbfaac4aa39980f2a4b30f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1476775833}
   loadedRooms: []
 --- !u!4 &1881357111
 Transform:

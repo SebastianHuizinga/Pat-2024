@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class RoomInfo {
 
     public string name;
     public int X;
     public int Y;
-
+  
+   
 }
 
 
 public class RoomController : MonoBehaviour
 {
 
-
+    
+  public GameObject player;
     public static RoomController instance;
 
     string currentWorldName = "";
@@ -133,7 +134,12 @@ public class RoomController : MonoBehaviour
     public void OnPlayerEnterRoom(Room room){
         currRoom = room;
         CameraController.instance.currRoom = room;
-        
+        Debug.Log("Current pos" + currRoom.findCentre());
+        player.transform.position = currRoom.findCentre();
+         
+    }
+    public Room getCurrRoom(){
+        return currRoom;
     }
 }
 
