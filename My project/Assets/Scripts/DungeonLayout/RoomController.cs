@@ -107,7 +107,7 @@ public class RoomController : MonoBehaviour
 
              if(loadedRooms.Count == 0){
 
-             CameraController.instance.currRoom = room;
+            // CameraController.instance.currRoom = room;
          }
 
             loadedRooms.Add(room);
@@ -133,13 +133,16 @@ public class RoomController : MonoBehaviour
 
     public void OnPlayerEnterRoom(Room room){
         currRoom = room;
-        CameraController.instance.currRoom = room;
+        //CameraController.instance.Update(currRoom.findCentre);
         Debug.Log("Current pos" + currRoom.findCentre());
         player.transform.position = currRoom.findCentre();
          
     }
     public Room getCurrRoom(){
         return currRoom;
+    }
+    public void setRoom(Room room){
+        currRoom = room;
     }
 }
 
