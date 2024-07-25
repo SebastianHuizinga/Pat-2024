@@ -127,14 +127,16 @@ public class Room : MonoBehaviour
         return new Vector3(RoomController.instance.getCurrRoom().transform.position.x, RoomController.instance.getCurrRoom().transform.position.y);
     }
 
+    
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !hasEntered)
         {
             hasEntered = true;
-            Debug.Log("Player entered room: " + name);
+            //Debug.Log("Player entered room: " + name);
             RoomController.instance.OnPlayerEnterRoom(this);
-            Debug.Log("Player entered room: " + name);
+          
 
         }
         }

@@ -24,6 +24,7 @@ public class RoomController : MonoBehaviour
 
     RoomInfo currentLoadRoomData;
     Room currRoom;
+    Door currDoor;
 
     Queue<RoomInfo> loadRoomQueue = new Queue<RoomInfo>();
     public List<Room> loadedRooms = new List<Room>();
@@ -107,7 +108,7 @@ public class RoomController : MonoBehaviour
 
              if(loadedRooms.Count == 0){
 
-            // CameraController.instance.currRoom = room;
+
          }
 
             loadedRooms.Add(room);
@@ -133,9 +134,22 @@ public class RoomController : MonoBehaviour
 
     public void OnPlayerEnterRoom(Room room){
         currRoom = room;
-        //CameraController.instance.Update(currRoom.findCentre);
-        Debug.Log("Current pos" + currRoom.findCentre());
-        player.transform.position = currRoom.findCentre();
+
+        if ((currDoor.getDoorType() == Door.DoorType.top) || (currDoor.getDoorType() == Door.DoorType.bottom)){
+              if(currDoor.transform.position.y > player.transform.position.y){
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 5, player.transform.position.z);
+        }else if(currDoor.transform.position.y < player.transform.position.y){
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y - 5, player.transform.position.z);
+        }
+        }
+      
+        if ((currDoor.getDoorType() == Door.DoorType.left) || (currDoor.getDoorType() == Door.DoorType.right)){
+         if(currDoor.transform.position.x > player.transform.position.x){
+            player.transform.position = new Vector3(player.transform.position.x + 5, player.transform.position.y, player.transform.position.z);
+        } else if(currDoor.transform.position.x < player.transform.position.x){
+            player.transform.position = new Vector3(player.transform.position.x - 5, player.transform.position.y, player.transform.position.z);
+        }
+         }
          
     }
     public Room getCurrRoom(){
@@ -144,7 +158,13 @@ public class RoomController : MonoBehaviour
     public void setRoom(Room room){
         currRoom = room;
     }
+       public void SetCurrentDoor(Door door)
+    {
+        currDoor = door;
+        Debug.Log("Current door set to: " + currDoor.getDoorType());
+    }
 }
+
 
   
     

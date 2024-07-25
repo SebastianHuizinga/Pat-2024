@@ -5,5 +5,23 @@ public class Door : MonoBehaviour
     public enum DoorType { left, right, top, bottom }
     public DoorType doorType;
  
-    // Other properties and methods for the Door class
+  public DoorType getDoorType(){
+        return this.doorType; 
     }
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+
+            RoomController roomController = FindObjectOfType<RoomController>();
+            if (roomController != null)
+            {
+                roomController.SetCurrentDoor(this); 
+            }
+        }
+   
+    }
+    
+}
