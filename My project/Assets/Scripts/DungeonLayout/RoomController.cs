@@ -137,17 +137,17 @@ public class RoomController : MonoBehaviour
 
         if ((currDoor.getDoorType() == Door.DoorType.top) || (currDoor.getDoorType() == Door.DoorType.bottom)){
               if(currDoor.transform.position.y > player.transform.position.y){
-            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + currDoor.GetHeight(), player.transform.position.z);
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1 + currDoor.GetHeight(), player.transform.position.z);
         }else if(currDoor.transform.position.y < player.transform.position.y){
-            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y - currDoor.GetHeight(), player.transform.position.z);
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y - 1 - currDoor.GetHeight(), player.transform.position.z);
         }
         }
       
         if ((currDoor.getDoorType() == Door.DoorType.left) || (currDoor.getDoorType() == Door.DoorType.right)){
          if(currDoor.transform.position.x > player.transform.position.x){
-            player.transform.position = new Vector3(player.transform.position.x + currDoor.GetLength(), player.transform.position.y, player.transform.position.z);
+            player.transform.position = new Vector3(player.transform.position.x + 1 + currDoor.GetLength(), player.transform.position.y, player.transform.position.z);
         } else if(currDoor.transform.position.x < player.transform.position.x){
-            player.transform.position = new Vector3(player.transform.position.x - currDoor.GetLength(), player.transform.position.y, player.transform.position.z);
+            player.transform.position = new Vector3(player.transform.position.x - 1 - currDoor.GetLength(), player.transform.position.y, player.transform.position.z);
         }
          }
          
