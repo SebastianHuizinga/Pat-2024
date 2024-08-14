@@ -134,6 +134,8 @@ public class RoomController : MonoBehaviour
 
     public void OnPlayerEnterRoom(Room room){
         currRoom = room;
+        
+    
 
         if ((currDoor.getDoorType() == Door.DoorType.top) || (currDoor.getDoorType() == Door.DoorType.bottom)){
               if(currDoor.transform.position.y > player.transform.position.y){

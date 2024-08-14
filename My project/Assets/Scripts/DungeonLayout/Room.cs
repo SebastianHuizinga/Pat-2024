@@ -134,7 +134,7 @@ public class Room : MonoBehaviour
         if (other.CompareTag("Player") && !hasEntered)
         {
             hasEntered = true;
-            //Debug.Log("Player entered room: " + name);
+            Debug.Log("Playerasdsad entered room: " + name);
             RoomController.instance.OnPlayerEnterRoom(this);
           
 
