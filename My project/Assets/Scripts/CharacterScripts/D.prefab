@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2943250924276244807}
   - component: {fileID: -3799582502533981526}
   - component: {fileID: -2314530879311616356}
+  - component: {fileID: 6303895140554382589}
   m_Layer: 0
   m_Name: D
   m_TagString: Untagged
@@ -178,6 +179,23 @@ MonoBehaviour:
   dashSpeed: 10
   dashLength: 1
   dashCD: 1
+  abilityUI: {fileID: 0}
+--- !u!114 &6303895140554382589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943250924276244806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 179b8395fcca2904f8db8ab0bf8701ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 2367275181618860162, guid: 377b92c94f7553a4ebb837a66680628b, type: 3}
+  handTransform: {fileID: 2943250925502199485}
+  fireRate: 0.5
+  bulletDamage: 10
 --- !u!1 &2943250925201942770
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +252,7 @@ GameObject:
   - component: {fileID: 2943250925502199485}
   - component: {fileID: 2943250925502199486}
   m_Layer: 0
-  m_Name: bulletTransform
+  m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/RoomLayouts/Start.unity
     guid: 95dc080210535da49886ddca5836be32
   - enabled: 1
-    path: Assets/Scenes/RoomLayouts/Empty.unity
+    path: Assets/Scenes/RoomLayouts/enemy.unity
     guid: 1e21158eb1084354dab58ca1672e486b
   - enabled: 1
     path: Assets/Scenes/RoomLayouts/End.unity
@@ -20,4 +20,29 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RoomLayouts/Shop.unity
     guid: 1c3c002b3edef1242b4b691942aee5c8
+  - enabled: 1
+    path: Assets/Scenes/RoomLayouts/enemy2.unity
+    guid: 6d1068705bd3e9d4cb3d3874db856a74
+  - enabled: 1
+    path: Assets/Scenes/RoomLayouts/enemy3.unity
+    guid: 1cd0753b86e212a47966bd260ffbb756
+  - enabled: 1
+    path: Assets/Scenes/RoomLayouts/enemy4.unity
+    guid: 6afeb0c3d5e50b84cb2770baec2e8a5a
+  - enabled: 1
+    path: Assets/Scenes/RoomLayouts/enemy5.unity
+    guid: 93f5911710846a248a0e495f780d62e3
+  - enabled: 1
+    path: Assets/Scenes/RoomLayouts/enemy6.unity
+    guid: 708758bc394793342b9ec448aa4583b0
+  - enabled: 1
+    path: Assets/Scenes/RoomLayouts/enemy7.unity
+    guid: 226fc927c80f7f441916d9d93fa52b49
+  - enabled: 1
+    path: Assets/Scenes/RoomLayouts/enemy8.unity
+    guid: e28ec7560ad6de34f9eaba9731665352
+  - enabled: 1
+    path: Assets/Scenes/RoomLayouts/enemy9.unity
+    guid: 670d016a6c63a8649a6fef125f55f885
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

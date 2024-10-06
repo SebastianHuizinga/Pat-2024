@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 534816070055577021}
   - component: {fileID: -4710179017016706244}
   - component: {fileID: 5499717675772912963}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4105874039828702763
 SpriteRenderer:
@@ -99,7 +99,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7994cdceb474c5b4aa8e873c4374e380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 2
+  baseDamage: 25
+  isBurningBullet: 0
+  isPoisoningBullet: 0
+  burnDamage: 1
+  burnDuration: 5
+  poisonDamage: 1
+  poisonDuration: 5
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  bulletLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  impactEffect: {fileID: 0}
 --- !u!50 &-4710179017016706244
 Rigidbody2D:
   serializedVersion: 4
@@ -115,7 +131,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

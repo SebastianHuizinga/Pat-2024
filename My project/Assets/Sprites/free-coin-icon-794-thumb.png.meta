@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      free-coin-icon-794-thumb_0: -2749998718264038059
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

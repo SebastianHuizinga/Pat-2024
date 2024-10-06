@@ -21,7 +21,7 @@ public class Room : MonoBehaviour
     {
         if (RoomController.instance == null)
         {
-            Debug.Log("Wrong scene");
+           // Debug.Log("Wrong scene");
             return;
         }
 
@@ -134,7 +134,7 @@ public class Room : MonoBehaviour
         if (other.CompareTag("Player") && !hasEntered)
         {
             hasEntered = true;
-            Debug.Log("Playerasdsad entered room: " + name);
+            //Debug.Log("Playerasdsad entered room: " + name);
             RoomController.instance.OnPlayerEnterRoom(this);
           
 
